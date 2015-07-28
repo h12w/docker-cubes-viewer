@@ -17,3 +17,4 @@ RUN unzip /tmp/cv.zip && \
 WORKDIR /work
 
 ENTRYPOINT python web/cvapp/manage.py runserver
+
