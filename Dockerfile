@@ -7,6 +7,7 @@ RUN apt-get update && \
 
 RUN pip install django        \
                 django-piston \
+		djangorestframework \
                 requests
 
 ADD https://github.com/jjmontesl/cubesviewer/archive/master.zip /tmp/cv.zip
