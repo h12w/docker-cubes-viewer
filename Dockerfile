@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:2
 MAINTAINER Hǎiliàng Wáng <w@h12.me>
 
 RUN apt-get update && \
