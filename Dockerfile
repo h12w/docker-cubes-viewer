@@ -19,5 +19,7 @@ RUN unzip /tmp/cv.zip                  && \
     cd cubes-viewer                    && \
     ./syncdb.expect
 
-ENTRYPOINT python cubes-viewer/src/web/cvapp/manage.py runserver
+WORKDIR cubes-viewer
+
+ENTRYPOINT ./run.sh
 
