@@ -10,12 +10,10 @@ RUN pip install django        \
 		djangorestframework \
                 requests
 
-ADD https://github.com/jjmontesl/cubesviewer/archive/master.zip /tmp/cv.zip
+ADD https://github.com/h12w/cubesviewer/archive/master.zip /tmp/cv.zip
 RUN unzip /tmp/cv.zip && \
     rm /tmp/cv.zip && \
     mv cubesviewer-master cubes-viewer
 
-WORKDIR /work
-
-ENTRYPOINT python web/cvapp/manage.py runserver
+ENTRYPOINT python cubes-viewer/src/web/cvapp/manage.py runserver
 
