@@ -15,9 +15,7 @@ RUN pip install django              \
 ADD https://github.com/h12w/cubesviewer/archive/master.zip /tmp/cv.zip
 RUN unzip /tmp/cv.zip                  && \
     rm /tmp/cv.zip                     && \
-    mv cubesviewer-master cubes-viewer && \
-    cd cubes-viewer                    && \
-    ./syncdb.expect
+    mv cubesviewer-master cubes-viewer
 
 WORKDIR cubes-viewer
 
